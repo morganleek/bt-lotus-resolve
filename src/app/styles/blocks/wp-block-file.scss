@@ -1,0 +1,26 @@
+.wp-block-file {
+	width: 100%;
+	display: block;
+	a {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid var(--wp--preset--color--lotus-blue);
+		text-decoration: none;
+		padding: max(39px, 1.97vw) 0;
+		font-size: var(--wp--preset--font-size--medium);
+		font-weight: 600;
+		color: var(--wp--preset--color--lotus-dark-grey);
+		&::after {
+			content: '';
+			width: clamp(1.6875rem, 1.2981rem + 1.7308vw, 3.375rem); // 54px
+			// height: 44px;
+			aspect-ratio: 1.22727;
+			display: block;
+			background: url(./images/icon-download.svg) 0 0/100% auto no-repeat;
+			
+		}
+	}
+}
+
+

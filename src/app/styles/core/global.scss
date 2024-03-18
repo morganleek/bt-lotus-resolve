@@ -1,0 +1,55 @@
+:root {
+	--wp--bones-theme--outer-spacer: 50px;
+	@media (min-width: 992px) {
+		// 50px @ 922px -> 246px @ 1920
+		--wp--bones-theme--outer-spacer: clamp(3.125rem, -9.9698rem + 21.1207vw, 15.375rem); 
+		// --wp--bones-theme--outer-spacer: min(12.8125vw, 246px);
+	}
+	--wp--bones-theme--background--padding: min(4.166vw, 80px);
+	body.home & {
+		--wp--bones-theme--background--padding: min(5.208333vw, 100px); 
+	}
+}
+
+img {
+	&[loading="lazy"] {
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	&.has-loaded {
+		opacity: 1;
+	}
+}
+
+.announcement-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	margin: 0;
+	opacity: 0;
+	transition: all 0.3s;
+	pointer-events: none;
+	.announcement-is-visible & {
+		opacity: 1;
+		pointer-events: all;
+		overflow: scroll;
+	}
+	& > div {
+		min-height: 100vh;
+	}
+	img[src*=".svg"] {
+		width: 20px;
+	}
+	img[loading=lazy] {
+		opacity: 1 !important;
+	}
+}
+
+body {
+	&.announcement-is-visible {
+		overflow: hidden;
+	}
+}

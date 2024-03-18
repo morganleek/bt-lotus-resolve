@@ -1,0 +1,13 @@
+{
+	"name": "acf/uranium-price",
+	"title": "Uranium Price",
+	"description": "The current uranium price",
+	"category": "formatting",
+	"icon": "admin-comments",
+	"keywords": ["uranium", "price"],
+	"acf": {
+			"mode": "preview",
+			"renderTemplate": "uranium-price.php"
+	},
+	"align": "full"
+}

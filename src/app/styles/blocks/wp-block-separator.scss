@@ -1,0 +1,9 @@
+.wp-block-separator {
+	&.is-style-wide {
+		height: 3px;
+		width: 100%;
+		&.has-background:not(.is-style-dots) {
+			height: 3px;
+		}
+	}
+}

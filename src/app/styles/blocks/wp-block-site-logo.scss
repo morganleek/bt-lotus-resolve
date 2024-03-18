@@ -1,0 +1,71 @@
+.wp-block-site-logo {
+	// transform: translate(0, -6%);
+	transition: all 0.5s;
+	svg {
+		// opacity: 0.5;
+		width: 100%;
+		// aspect-ratio: 1.666;
+    height: auto;
+		* {
+			transition: opacity 0.2s;
+		}
+	}
+	header & {
+		min-width: 90px;
+    min-height: 25px;
+		
+		width: min(8.541666vw, 164px);
+		height: min(2.5624996vw, 50px);
+    overflow: visible;
+		// width: min(7.447916vw, 143px);
+		@media (min-width: 992px) {
+			// margin-left: min(1.875vw, 36px); 
+		}
+		body:not(.home) & {
+			max-width: 115px;
+			max-height: 32px;
+			// width: min(10.729166vw, 206px);
+			// height: min(3.2031245vw, 62px);
+		}
+		body.is-fixed & {
+			transform: translate(-23.91%, 0);
+			
+			svg {
+				& > *:not(.flower) {
+					opacity: 0;
+				}
+			}
+		}
+	}
+}
+
+// width --- calc(100vw - min(9.791666vw, 188px))
+// min(1428px, calc(100vw - 2 * var(--wp--bones-theme--outer-spacer) ) )
+
+// 1.25rem
+
+// min(9.791666vw, 188px) / 2 Nav Margin
+
+
+body:not(.home) {
+	header {
+		svg > g:not(.flower) * {
+			fill: #fff;
+		}
+	}
+	&:not(.is-fixed) {
+		svg > g.flower * {
+			fill: #fff;
+		}
+	}
+	&.is-fixed {
+		svg > g:not(.flower) {
+			opacity: 0;
+		}
+	}
+}
+// body:not(.home) header & {
+// 	svg > *:not(.flower) {
+// 		fill: red;
+// 	}
+// }

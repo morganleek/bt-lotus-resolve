@@ -1,0 +1,58 @@
+.wp-block-getwid-tabs {
+	.wp-block-getwid-tabs__nav-links {
+		gap: 16px;
+		li {
+			&.ui-state-active {
+				a {
+					background: var(--wp--preset--color--lotus-blue);
+					color: #fff;
+				}
+			}
+			&:not(:last-child) {
+				margin-top: 0;
+			}
+		}
+		a {
+			border: 1px solid var(--wp--preset--color--lotus-blue);
+			color: var(--wp--preset--color--lotus-blue);
+			padding: calc(.667em + 2px) calc(1.333em + 2px) !important;
+		}
+	}
+	.wp-block-getwid-tabs__tab-content-wrapper {
+		.wp-block-getwid-tabs__tab-content {
+			padding-left: 0;
+			padding-right: 0;
+			border: 0 none;
+			.wp-block-file {
+				a {
+					justify-content: flex-start;
+					gap: 10px;
+					padding-top: 10px;
+					padding-bottom: 10px;
+					@media (hover: hover) {
+						transition: color 0.2s;
+						&:hover {
+							color: var(--wp--preset--color--lotus-blue);
+						}
+					}
+					&::before {
+						content: '';
+						width: 22px;
+						height: 30px;
+						background: url(./images/file-regular.svg) 50% 50%/100% auto no-repeat;
+					}
+					&::after {
+						width: 30px;
+						margin-right: 0;
+						margin-left: auto;
+					}
+					&[href*=".pdf"] {
+						&::before {
+							background: url(./images/file-pdf-regular.svg) 50% 50%/100% auto no-repeat;
+						}
+					}
+				}
+			}
+		}
+	}
+}
